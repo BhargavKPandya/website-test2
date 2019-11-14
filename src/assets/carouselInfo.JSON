@@ -1,0 +1,21 @@
+[
+
+    {
+        "carousel": "Item1",
+        "carouselHeading": "Tea Image First Item from JSON",
+        "carouselDescription": "Tea Image First Description",
+        "img": "assets/carouselImages/tea-garden-1.jpg"
+    },
+    {
+        "carousel": "Item2",
+        "carouselHeading": "Tea Image Second Item from JSON",
+        "carouselDescription": "Tea Image Second Description",
+        "img": "assets/carouselImages/Image1.jpeg"
+    },
+    {
+        "carousel": "Item3",
+        "carouselHeading": "Tea Image Third Item from JSON",
+        "carouselDescription": "Tea Image Third Description",
+        "img": "assets/carouselImages/tea-garden-1.jpg"
+    }
+]

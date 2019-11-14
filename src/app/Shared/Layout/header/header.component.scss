@@ -1,0 +1,27 @@
+nav {
+    //background-color: #3f28ea;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    background-image: linear-gradient(240deg, #d31027 0, #ea384d 100%);
+    ul {
+        li {
+            font-weight: 600;
+            color: #fff;
+            font-size: 1rem;
+        }
+    }
+}
+
+.animSticky {
+    height: 70px;
+    background-image: linear-gradient(240deg, #d31027 0, #ea384d 100%);
+    scale: 1.2;
+    transition: 30ms;
+    animation: .7s forwards slideDown;
+    ul {
+        li {
+            font-weight: 600;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+    }
+}

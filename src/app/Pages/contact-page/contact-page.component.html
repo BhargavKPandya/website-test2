@@ -1,0 +1,87 @@
+<div class="section">
+    <h2 class="h1 pt-4">Contact us</h2>
+    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam.</p>
+    <div class="row">
+        <div class="col-lg-5 my-4">
+            <form class="example-form">
+                <!-- <mat-form-field class="example-full-width">
+                     <input matInput placeholder="Email" [formControl]="emailFormControl">
+                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                        Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                        Email is <strong>required</strong>
+                    </mat-error> 
+                </mat-form-field> -->
+            </form>
+        </div>
+        <div class="col-lg-7">
+            <div class="row">
+                <div class="col-lg-12">
+                    <app-here-map #map appId="yS5e8IeqESkx6s3SClWz" appCode="mG-pCucEPMhskDmEH1qu6w">
+                    </app-here-map>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4"><a class="accent-1 waves-light btn-blue btn-floating" color="blue" floating="true" mdbbtn="" mdbwaveseffect=""><i  class="fas fa-map-marker"></i></a>
+                    <p>San Francisco, CA 94126</p>
+                    <p>United States</p>
+                </div>
+                <div class="col-md-4"><a class="accent-1 waves-light btn-blue btn-floating" color="blue" floating="true" mdbbtn="" mdbwaveseffect=""><i  class="fas fa-phone"></i></a>
+                    <p>+ 01 234 567 89</p>
+                    <p>Mon - Fri, 8:00-22:00</p>
+                </div>
+                <div class="col-md-4"><a class="accent-1 waves-light btn-blue btn-floating" color="blue" floating="true" mdbbtn="" mdbwaveseffect=""><i  class="fas fa-envelope"></i></a>
+                    <p>info@gmail.com</p>
+                    <p>sale@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+  <div class="col-10 offset-1">
+<form #f="ngForm" (ngSubmit)="onSubmit()">
+	<div class="row">
+		<div class="col-12 col-sm-6 form-group required">
+			<label for="name">Name</label>
+			<input type="text" [disabled]="loading" [(ngModel)]="contact.Name" name="contact.Name" required="" class="form-control text-input"
+				id="name" placeholder="Name" />
+		</div>
+		<div class="col-12 col-sm-6 form-group required">
+			<label for="email">E-mail</label>
+			<input type="email" [disabled]="loading" [(ngModel)]="contact.Email" name="contact.Email" required=""
+				class="form-control text-input" id="email" placeholder="E-mail" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 form-group required">
+			<label for="subject">Subject</label>
+			<input type="text" [disabled]="loading" [(ngModel)]="contact.Subject" name="contact.Subject" required=""
+				class="form-control text-input" id="subject" placeholder="Subject" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 form-group required">
+			<label for="message">Message</label>
+			<textarea type="text" [disabled]="loading" [(ngModel)]="contact.Message" name="contact.Message" required=""
+				class="form-control" id="message" placeholder="Message..."></textarea>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<button type="submit" [disabled]="loading" class="btn btn-success">Send</button>
+		</div>
+	</div>
+</form>
+</div>
+-->
+
+<!--<div #map style="width: 1280px; height: 768px"></div>-->
+<!--<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        <app-here-map #map appId="yS5e8IeqESkx6s3SClWz" appCode="mG-pCucEPMhskDmEH1qu6w">
+        </app-here-map>
+    </div>
+</div>-->

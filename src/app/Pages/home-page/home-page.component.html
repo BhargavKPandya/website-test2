@@ -1,0 +1,359 @@
+<!--<div class="container-fluid">-->
+<!--<ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+        <img [src]="images[0]" alt="Random first slide">
+        <div class="carousel-caption">
+            <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <img [src]="images[1]" alt="Random second slide">
+        <div class="carousel-caption">
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <img [src]="images[2]" alt="Random third slide">
+        <div class="carousel-caption">
+            <h3>Third slide label</h3>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+    </ng-template>
+</ngb-carousel>-->
+<!--</div>-->
+
+<!--Old Carousel Code-->
+<!--<div>
+    <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+        <mdb-carousel-item>
+            <div class="view w-100">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" alt="First slide">
+                <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+            </div>
+            <div class="carousel-caption">
+                <h3 class="h3-responsive">Light mask</h3>
+                <p>First text</p>
+            </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+            <div class="view w-100">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg" alt="Second slide">
+                <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+            </div>
+            <div class="carousel-caption">
+                <h3 class="h3-responsive">Strong mask</h3>
+                <p>Secondary text</p>
+            </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+            <div class="view w-100">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg" alt="Third slide">
+                <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+            </div>
+            <div class="carousel-caption">
+                <h3 class="h3-responsive">Slight mask</h3>
+                <p>Third text</p>
+            </div>
+        </mdb-carousel-item>
+    </mdb-carousel>
+</div>-->
+
+<!-- Dynamic Carousel Code Start-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-lg-12 py-3">
+            <ngb-carousel>
+                <ng-template ngbSlide *ngFor="let carousel of carouselItem">
+                    <img [src]="carousel.img" [class.carousel-img]="hasCarouselImage" alt="Carousel Image">
+                    <div class="carousel-caption">
+                        <h3>{{ carousel.carouselHeading}}</h3>
+                        <p [innerText]="carousel.carouselDescription"></p>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+            <div>{{carouselError}}</div>
+        </div>
+    </div>
+</div>
+
+<!-- Dynamic Carousel Code Start-->
+
+<!--Section: Features v.1-->
+<div class="text-center section">
+
+    <!--Section heading-->
+    <h2 class="h1 py-5 font-weight-bold">Why is it so great?</h2>
+    <!--Section description-->
+    <p class="px-5 mb-5 pb-3 lead grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
+    <!--Grid row-->
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-lg-4">
+            <i class="fas fa-chart-area fa-3x red-text"></i>
+            <h5 class="font-weight-bold mt-3">Analytics</h5>
+            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.
+            </p>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4">
+            <i class="fas fa-book fa-3x cyan-text"></i>
+            <h5 class="font-weight-bold mt-3">Tutorials</h5>
+            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.
+            </p>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4">
+            <i class="far fa-comments fa-3x orange-text"></i>
+            <h5 class="font-weight-bold mt-3">Support</h5>
+            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.
+            </p>
+        </div>
+        <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+    <!--<hr class="my-5">-->
+</div>
+<!--Section: Features v.1-->
+
+<div class="section">
+    <div class="container">
+        <div class="mb-5 text-center">
+            <h3 class="mt-4">Reasons to work with us</h3>
+            <div class="mt-3">
+                <p class="lead lh-180"> Always looking for better ways to do things, innovate and help students to clear their concepts and lead the industry . </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 p-3 col-sm-12">
+                <div class="shadow" [class.hoverEffect]="hoverEffectElm" (mouseenter)="onMouseEnter($event)" (mouseleave)="onMouseLeave($event)">
+                    <div class="card-body py-4">
+                        <div class="d-flex align-items-start">
+                            <div class="text-primary rounded-circle"><i class="fa fa-piggy-bank"></i></div>
+                            <div class="pl-4">
+                                <h5 class="mb-0">Earn Money</h5>
+                                <p class="mb-0"> As a instructor believe me you will get the best you deserve . not only in terms of money but also the students respect our royalty </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 p-3 col-sm-12">
+                <div class="shadow">
+                    <div class="card-body py-4">
+                        <div class="d-flex align-items-start">
+                            <div class="text-primary rounded-circle"><i class="fa fa-play"></i></div>
+                            <div class="pl-4">
+                                <h5 class="mb-0">Inspire Student</h5>
+                                <p class="mb-0"> Help students learn new skills, advance their careers, and explore their future by sharing your knowledge and experience. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 p-3 col-sm-12">
+                <div class="shadow act_hov">
+                    <div class="card-body py-4">
+                        <div class="d-flex align-items-start">
+                            <div class="text-primary rounded-circle"><i class="fa fa-thumbs-up"></i></div>
+                            <div class="pl-4">
+                                <h5 class="mb-0">Join the community of millions</h5>
+                                <p class="mb-0"> Take advantage of our active community of instructors to help you through your course creation process. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 p-3">
+                <div class="shadow act_hov">
+                    <div class="card-body py-4">
+                        <div class="d-flex align-items-start">
+                            <div class="text-primary rounded-circle"><i class="fa fa-business-time"></i></div>
+                            <div class="pl-4">
+                                <h5 class="mb-0">Develop your skills by developing others</h5>
+                                <p class="mb-0"> Make the use of your skills to make your students better than others and develop you experiance. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Projects section v.3 -->
+<div class="container-fluid section">
+
+    <!-- Section heading -->
+    <h2 class="h1-responsive font-weight-bold text-center my-5">Our best projects</h2>
+    <!-- Section description -->
+    <p class="grey-text text-center w-responsive mx-auto mb-5">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit est laborum.</p>
+
+    <!-- Grid row -->
+    <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-lg-5 mb-lg-0 mb-5">
+            <!--Image-->
+            <img [class.imgHover]="imgHoverTest1" (mouseenter)="onMouseEnter($event)" (mouseleave)="onMouseLeave($event)" src="https://mdbootstrap.com/img/Photos/Others/images/83.jpg" alt="Sample project image" class="img-fluid rounded">
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-lg-7">
+
+            <!-- Grid row -->
+            <div class="row mb-3">
+                <div class="col-md-1 col-2">
+                    <i class="fas fa-book fa-2x cyan-text"></i>
+                </div>
+                <div class="col-md-11 col-10">
+                    <h5 class="font-weight-bold mb-3">Education</h5>
+                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing. Reprehenderit maiores nam, aperiam minima elit assumenda voluptate velit.</p>
+                </div>
+            </div>
+            <!-- Grid row -->
+
+            <!-- Grid row -->
+            <div class="row mb-3">
+                <div class="col-md-1 col-2">
+                    <i class="fas fa-code fa-2x red-text"></i>
+                </div>
+                <div class="col-md-11 col-10">
+                    <h5 class="font-weight-bold mb-3">Technology</h5>
+                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing. Reprehenderit maiores nam, aperiam minima elit assumenda voluptate velit.</p>
+                </div>
+            </div>
+            <!-- Grid row -->
+
+            <!-- Grid row -->
+            <div class="row">
+                <div class="col-md-1 col-2">
+                    <i class="far fa-money-bill-alt fa-2x deep-purple-text"></i>
+                </div>
+                <div class="col-md-11 col-10">
+                    <h5 class="font-weight-bold mb-3">Finance</h5>
+                    <p class="grey-text mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing. Reprehenderit maiores nam, aperiam minima elit assumenda voluptate velit.</p>
+                </div>
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+    <!--<hr class="my-5">-->
+
+    <!-- Grid row -->
+    <div class="row section">
+
+        <!-- Grid column -->
+        <div class="col-lg-7">
+
+            <!-- Grid row -->
+            <div class="row mb-3">
+                <div class="col-md-1 col-2">
+                    <i class="fas fa-chart-bar fa-2x indigo-text"></i>
+                </div>
+                <div class="col-md-11 col-10">
+                    <h5 class="font-weight-bold mb-3">Marketing</h5>
+                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing. Reprehenderit maiores nam, aperiam minima elit assumenda voluptate velit.</p>
+                </div>
+            </div>
+            <!-- Grid row -->
+
+            <!-- Grid row -->
+            <div class="row mb-3">
+                <div class="col-md-1 col-2">
+                    <i class="fas fa-music fa-2x pink-text"></i>
+                </div>
+                <div class="col-md-11 col-10">
+                    <h5 class="font-weight-bold mb-3">Entertainment</h5>
+                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing. Reprehenderit maiores nam, aperiam minima elit assumenda voluptate velit.</p>
+                </div>
+            </div>
+            <!-- Grid row -->
+
+            <!-- Grid row -->
+            <div class="row mb-lg-0 mb-5">
+                <div class="col-md-1 col-2">
+                    <i class="far fa-smile fa-2x blue-text"></i>
+                </div>
+                <div class="col-md-11 col-10">
+                    <h5 class="font-weight-bold mb-3">Communication</h5>
+                    <p class="grey-text mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing. Reprehenderit maiores nam, aperiam minima elit assumenda voluptate velit.</p>
+                </div>
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-lg-5">
+            <!--Image-->
+            <img [class.imgHover]="imgHoverTest1" (mouseenter)="onMouseEnter($event)" (mouseleave)="onMouseLeave($event)" src="https://mdbootstrap.com/img/Photos/Others/images/82.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1 hoverable">
+        </div>
+        <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+</div>
+<!-- Projects section v.3 -->
+
+<!--<div class="container-fluid mx-5 mb-5 sliding-background">
+  <div class="row">
+      <div class="col-lg-3">
+          <img class="img-fluid d-flex gray-gradient" src="https://corretto.elated-themes.com/wp-content/uploads/2018/04/clients-img-3-hover.png">
+      </div>
+      <div class="col-lg-3">
+          <img class="img-fluid d-flex gray-gradient" src="https://corretto.elated-themes.com/wp-content/uploads/2018/04/clients-img-3-hover.png">
+      </div>
+      <div class="col-lg-3">
+          <img class="img-fluid d-flex gray-gradient" src="https://corretto.elated-themes.com/wp-content/uploads/2018/04/clients-img-3-hover.png">
+      </div>
+      <div class="col-lg-3">
+          <img class="img-fluid d-flex gray-gradient" src="https://corretto.elated-themes.com/wp-content/uploads/2018/04/clients-img-3-hover.png">
+      </div>
+  </div>
+</div>-->
+<!--<hr class="my-5">-->
+<div class="container-fluid mb-5 text-center section">
+
+    <div class="row">
+        <div class="col-lg-3">
+            <span>250</span>
+            <h5 class="font-weight-bold">VARIETIES OF TEAS</h5>
+            <p class="grey-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit aenean</p>
+        </div>
+        <div class="col-lg-3">
+            <span>150</span>
+            <h5 class="font-weight-bold">VARIETIES OF TEAS</h5>
+            <p class="grey-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit aenean</p>
+        </div>
+        <div class="col-lg-3">
+            <span>30</span>
+            <h5 class="font-weight-bold">YEARS OF BUSINESS</h5>
+            <p class="grey-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit aenean</p>
+        </div>
+        <div class="col-lg-3">
+            <span>250</span>
+            <h5 class="font-weight-bold">VARIETIES OF TEAS</h5>
+            <p class="grey-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit aenean</p>
+        </div>
+
+    </div>
+
+</div>
